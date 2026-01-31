@@ -271,7 +271,3 @@ docker run --rm \
 ## Disclaimer
 
 This is an **unofficial, experimental project** not affiliated with or endorsed by Lovable. It may violate Lovable's terms of service. The authors are not responsible for any consequences of using this tool, including but not limited to account suspension or data loss.
-
-## License
-
-MIT - Experimental use only. No warranty provided.
