@@ -1,17 +1,27 @@
 # Lovable Remix Automation
 
+> **⚠️ EXPERIMENTAL PROOF OF CONCEPT**
+>
+> This project is an experimental exploration of browser automation for Lovable.dev. It is not production-ready and may break at any time if Lovable changes their UI. Use at your own risk.
+
 Headless browser automation for creating Lovable project remixes.
 
 ## Overview
 
-This automation suite provides programmatic remix creation for Lovable projects using **headless browser automation**. The API approach doesn't work (Lovable doesn't expose a remix API), so this uses Playwright to automate the UI flow.
+This is an **experimental proof of concept** demonstrating programmatic remix creation for Lovable projects using headless browser automation. Since Lovable doesn't expose a public remix API, this uses Playwright to automate the UI flow.
 
-**Features:**
+**Experimental Features:**
 - Headless email+password authentication
 - UI-based remix via Playwright
 - Session persistence for reuse
 - Safety mechanisms (rate limiting, circuit breaker, idempotency)
 - Docker-ready for server deployment
+
+**Limitations:**
+- Relies on UI selectors that may change without notice
+- Not officially supported by Lovable
+- May trigger rate limiting or account restrictions
+- Session tokens may expire unexpectedly
 
 ## Quick Start
 
@@ -258,6 +268,10 @@ docker run --rm \
   lovable-automation status
 ```
 
+## Disclaimer
+
+This is an **unofficial, experimental project** not affiliated with or endorsed by Lovable. It may violate Lovable's terms of service. The authors are not responsible for any consequences of using this tool, including but not limited to account suspension or data loss.
+
 ## License
 
-MIT - Use responsibly.
+MIT - Experimental use only. No warranty provided.
