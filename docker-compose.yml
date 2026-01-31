@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  lovable-automation:
+    build: .
+    image: lovable-automation
+    environment:
+      - LOVABLE_EMAIL=${LOVABLE_EMAIL}
+      - LOVABLE_PASSWORD=${LOVABLE_PASSWORD}
+      - LOVABLE_PROJECT_ID=${LOVABLE_PROJECT_ID:-}
+      - HEADLESS=true
+      - SLOW_MO=50
+    volumes:
+      # Named volumes for cross-platform persistence
+      - lovable_session:/app/session_state
+      - lovable_results:/app/results
+
+# Named volumes (managed by Docker)
+volumes:
+  lovable_session:
+  lovable_results:
+
+# Usage:
+#   docker-compose run --rm lovable-automation auth
+#   docker-compose run --rm -e LOVABLE_PROJECT_ID=<id> lovable-automation ui-remix -y

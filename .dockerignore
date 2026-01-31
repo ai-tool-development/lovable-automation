@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Environment (secrets - pass via env vars instead)
+.env
+
+# Session state (mount as volume instead)
+session_state/
+results/
+
+# Playwright artifacts
+playwright-report/
+test-results/
+.playwright/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug files
+debug_*.png
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Development/test files
+diagnose.py
+record_remix.py
+recorded_remix.py
+setup.sh
